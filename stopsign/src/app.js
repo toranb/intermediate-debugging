@@ -26,9 +26,18 @@ function init() {
 
   var reducer = (state, action) => {
     if (action && action.type === 'ADD') {
-      var number = state.number;
-      var added = number + 1;
-      return Object.assign({}, state, {number: added});
+      if (state.number > 4) {
+        try {
+          var number = state.number;
+          var added = foobar + 1;
+          return Object.assign({}, state, {number: added});
+        } catch (e) {
+        }
+      } else {
+        var number = state.number;
+        var added = number + 1;
+        return Object.assign({}, state, {number: added});
+      }
     }
     return state || {id: 1, number: 1};
   }
