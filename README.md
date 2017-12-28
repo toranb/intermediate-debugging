@@ -29,8 +29,9 @@ cd into the rollup directory and install everything
 
     yarn
 
-1st example: cd into test/samples/basic
+1st example: cd into test/samples/basic and copy the src directory
 
+    cp -r ../src .
     rollup main.js --o bundle.js --f es
 
 2nd example: cd into test
