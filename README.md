@@ -10,18 +10,20 @@ cd into the stopsign directory and run a simple web server
 
 ## 2 - remote debug headless chrome
 
-Create a docker instance and spin up the test suite from the jenkins folder
+Create a docker instance and clone this repository
 
-    yarn add testem
-    testem
+    https://github.com/toranb/docker-headless-chrome
 
-Use socat to connect via port 6222
+1st - spin up socat to connect via port 6222 (leave this running)
 
     socat -v -d tcp-listen:6222,reuseaddr,fork tcp:localhost:9222
 
-Read more about the centOS docker file
+2nd - start the test suite from another tmux pane (cd into the jenkins folder)
 
-    https://github.com/toranb/docker-headless-chrome
+    yarn add testem
+    ./node_modules/testem/testem.js ci
+
+visit http://localhost:6222/ to debug the tests
 
 ## 3 - debug nodeJS w/ rollup & mocha
 
