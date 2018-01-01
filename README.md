@@ -10,9 +10,7 @@ cd into the stopsign directory and run a simple web server
 
 ## 2 - remote debug headless chrome
 
-Create a docker instance and clone this repository
-
-    https://github.com/toranb/docker-headless-chrome
+Create a docker [container] with chrome installed and clone this repository
 
 1st - spin up socat to connect via port 6222 (leave this running)
 
@@ -49,3 +47,5 @@ cd into the rollup directory and install everything
 Copyright © 2018 Toran Billups http://toranbillups.com
 
 Licensed under the MIT License
+
+[container]: https://github.com/toranb/docker-headless-chrome
