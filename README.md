@@ -18,7 +18,7 @@ Create a docker [container] with chrome installed and clone this repository
 
 2nd - start the test suite from another tmux pane (cd into the jenkins folder)
 
-    yarn add testem
+    npm install testem
     ./node_modules/testem/testem.js ci
 
 visit http://localhost:6222/ to debug the tests
